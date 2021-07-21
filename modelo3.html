@@ -1,0 +1,906 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Menu</title>
+
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+
+
+<style>
+/* reset css */
+
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block }
+
+body { line-height: 1 }
+
+ol, ul { list-style: none }
+
+blockquote, q { quotes: none }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+body {
+	font: courier;
+	font-styLE: normal;
+	background-color: #FFFFFF;
+	}
+
+a { text-decoration: none; }
+
+/**
+ * Hidden fallback
+ */
+
+
+/**
+ * Styling navigation
+ */
+
+header {
+  margin-right: 0px;
+  margin-left: 0px;
+  max-width: 22.5rem;
+  margin-top:0px;
+
+}
+
+/**
+ * Styling top level items
+ */
+
+.nav a, .nav label {
+  display: block;
+ padding: .85rem;
+  color: #000000; 
+  background-color: #E7EAED;
+  box-shadow: inset 0 -1px #1d1d1d;
+  -webkit-transition: all .25s ease-in;
+  transition: all .25s ease-in;
+}
+
+.nav a:focus, .nav a:hover, .nav label:focus, .nav label:hover {
+	color: #FFFFFF;
+	background: #000066;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	border-color: #CCCCCC;
+  }
+
+.nav label { cursor: pointer; }
+
+/**
+ * Styling first level lists items
+ */
+
+.group-list a, .group-list label {
+  padding-left: 2rem;
+  background: #F9F9F9;
+}
+
+.group-list a:focus, .group-list a:hover, .group-list label:focus, .group-list label:hover { background: #000066; }
+
+/**
+ * Styling second level list items
+ */ 
+
+.sub-group-list a, .sub-group-list label {
+  padding-left: 3rem;
+  background: #F9F9F9;
+  box-shadow: inset 0 -1px #474747;
+}
+
+.sub-group-list a:focus, .sub-group-list a:hover, .sub-group-list label:focus, .sub-group-list label:hover { background: #000066; }
+
+/**
+ * Styling third level list items
+ */
+
+.sub-sub-group-list a, .sub-sub-group-list label {
+  padding-left: 4rem;
+  background: #F9F9F9;
+  box-shadow: inset 0 -1px #575757;
+}
+
+.sub-sub-group-list a:focus, .sub-sub-group-list a:hover, .sub-sub-group-list label:focus, .sub-sub-group-list label:hover { background: #000066; }
+
+/**
+ * Hide nested lists
+ */
+
+.group-list, .sub-group-list, .sub-sub-group-list {
+  height: 100%;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height .5s ease-in-out;
+  transition: max-height .5s ease-in-out;
+}
+
+.nav__list input[type=checkbox]:checked + label + ul { /* reset the height when checkbox is checked */
+max-height: 1000px; }
+
+/**
+ * Rotating chevron icon
+ */
+
+label > span {
+  float: right;
+  -webkit-transition: -webkit-transform .65s ease;
+  transition: transform .65s ease;
+}
+
+.nav__list input[type=checkbox]:checked + label > span {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+</style>
+</head>
+
+<body>
+<header role="banner">
+  <nav class="nav" role="navigation">
+    <ul class="nav__list">
+      <li>
+        <input id="group-1" type="checkbox" hidden />
+        <label for="group-1"><span class="fa fa-angle-right"></span>Configurações</label>
+        <ul class="group-list">
+          <li>
+            <input id="sub-group-1" type="checkbox" hidden />
+            <label for="sub-group-1"><span class="fa fa-angle-right"></span>Acessos</label>
+            <ul class="sub-group-list">
+              <li><a href="perfildeacessos.html" target="mainFrame">Perfil de Acessos</a></li>
+              <li><a href="niveldeacesso.html" target="mainFrame">Níveis de Acessos</a></li>
+              <li><a href="perfildeusuario.html" target="mainFrame">Perfis de Usuário</a></li>
+			  <li><a href="niveldeusuario.html" target="mainFrame">Níveis de Usuário</a></li>
+            </ul>
+          </li>
+		  <li>
+            <input id="sub-group-2" type="checkbox" hidden />
+            <label for="sub-group-2"><span class="fa fa-angle-right"></span>Tabelas Básicas</label>
+            <ul class="sub-group-list">
+              <li><a href="tabelairrf.html" target="mainFrame">Imposto de Renda</a></li>
+              <li><a href="tabelainss.html" target="mainFrame">Inss</a></li>
+              <li><a href="tabelasalfam.html" target="mainFrame">Salário Família</a></li>
+			  <li><a href="cadcep.html" target="mainFrame">Cadastro CEP</a></li>
+			  <li><a href="cadferiado.html" target="mainFrame">Cadastro de Feriados</a></li>
+			  <li><a href="cadempregador.html" target="mainFrame">Cadastro Empregador</a></li>
+			  <li><a href="cadtomador.html" target="mainFrame">Cadastro Tomador</a></li>
+			  <li><a href="cadcno.html" target="mainFrame">Cadastro Obra</a></li>
+			  <li><a href="#">Cadastro CAEPF</a></li>
+			  <li><a href="#">Fornecedor de Benefícios</a></li>
+			  <li><a href="#">Entidade Educacional</a></li>
+			  <li><a href="#">Cadastro Bancos</a></li>
+			  <li><a href="#">Cadastro Agências</a></li>
+			  <li><a href="#">Cadastro Cargos</a></li>
+			  <li><a href="#">Cadastro de Funções</a></li>
+			  <li><a href="#">Cadastro de Rubricas</a></li>
+			  <li><a href="#">Cadastro de Remuneração</a></li>
+			  <li><a href="#">Cadastro de Processos</a></li>
+			  <li><a href="#">Cadastro de Liminar</a></li>
+			  <li><a href="#">Cadastro de Sindicatos</a></li>
+			  		  
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+      	<input id="group-3" type="checkbox" hidden />
+      	<label for="group-3"><span class="fa fa-angle-right"></span> First level</label>
+      	<ul class="group-list">
+        	<li><a href="#">1st level item</a></li>
+        	<li><a href="#">1st level item</a></li>
+        		<input id="sub-group-3" type="checkbox" hidden />
+        		<label for="sub-group-3"><span class="fa fa-angle-right"></span> Second level</label>
+        		<ul class="sub-group-list">
+          			<li><a href="#">2nd level nav item</a></li>
+          			<li><a href="#">2nd level nav item</a></li>
+          	<li>
+            	<input id="sub-sub-group-3" type="checkbox" hidden />
+            	<label for="sub-sub-group-3"><span class="fa fa-angle-right"></span> Third level</label>
+           	 	<ul class="sub-sub-group-list">
+              		<li><a href="#">3rd level nav item</a></li>
+            	</ul>
+          	</li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li>
+      <input id="group-4" type="checkbox" hidden />
+      <label for="group-4"><span class="fa fa-angle-right"></span> First level</label>
+      <ul class="group-list">
+        <li>
+        <li><a href="#">1st level item</a></li>
+        <li><a href="#">1st level item</a></li>
+        <input id="sub-group-4" type="checkbox" hidden />
+        <label for="sub-group-4"><span class="fa fa-angle-right"></span> Second level</label>
+        <ul class="sub-group-list">
+          <li><a href="#">2nd level nav item</a></li>
+          <li><a href="#">2nd level nav item</a></li>
+          <li><a href="#">2nd level nav item</a></li>
+          <li>
+            <input id="sub-sub-group-4" type="checkbox" hidden />
+            <label for="sub-sub-group-4"><span class="fa fa-angle-right"></span> Third level</label>
+            <ul class="sub-sub-group-list">
+              <li><a href="#">3rd level nav item</a></li>
+              <li><a href="#">3rd level nav item</a></li>
+              <li><a href="#">3rd level nav item</a></li>
+            </ul>
+          </li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+      <li>
+      <input id="group-5" type="checkbox" hidden />
+      <label for="group-5"><span class="fa fa-angle-right"></span> First level</label>
+      <ul class="group-list">
+        <li>
+        <li><a href="#">1st level item</a></li>
+        <input id="sub-group-5" type="checkbox" hidden />
+        <label for="sub-group-5"><span class="fa fa-angle-right"></span> Second level</label>
+        <ul class="sub-group-list">
+          <li><a href="#">2nd level nav item</a></li>
+          <li><a href="#">2nd level nav item</a></li>
+        </ul>
+        </li>
+      </ul>
+      </li>
+    </ul>
+  </nav>
+</header><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46156385-1', 'cssscript.com');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
+
+
+<!--<li>Configurações
+<li>Acessos</li>
+<li>Perfil</li>
+<li>Usuários</li>
+</ul>
+</li>
+<!--sub menu 2 nivel 1 
+<li>Pessoa Jur&iacute;dica
+<!--elementos de sub menu 2 nivel 
+<ul>
+<li>Tipo de Inscri&ccedil;&atilde;o</li>
+<li>C&oacute;digo CNAE</li>
+<li>C&oacute;digo RAT</li>
+<li>Op&ccedil;&atilde;o Simples</li>
+<li>Classifica&ccedil;&atilde;o Tribut&aacute;ria</li>
+<li>Natureza Jur&iacute;dica</li>
+<li>Grupo E-Social</li>
+<li>Caged</li>
+<li>Sefip</li>
+<li>C&oacute;digo GPS</li>
+<li>C&oacute;digo FPAS</li>
+<li>Imposto de Renda</li>
+<li>Inss</li>
+<li>Sal&aacute;rio Fam&iacute;lia</li>
+<li>Pis sobre folha</li>
+<li>Pa&iacute;ses</li>
+<li>Munic&iacute;pios</li>
+<li>Cadastro de CEP</li>
+<li>Cadastro de Feriados</li>
+<li>Cadastro de Empregador</li>
+<li>Cadastro de Tomador</li>
+<li>Cadastro de Obra</li>
+<li>Cadastro CAEPF</li>
+<li>Respons&aacute;vel Empresa</li>
+<li>Fornecedor de Benef&iacute;cios</li>
+<li>Entidade Educacional</li>
+<li>Cadastro de Bancos</li>
+<li>Cadastro de Ag&ecirc;ncias</li>
+<li>Cadastro de CBO</li>
+<li>Cadastro de Cargos</li>
+<li>Cadastro de Fun&ccedil;&otilde;es</li>
+<li>Cadastro de Rubricas</li>
+<li>Cadastro de Remunera&ccedil;&otilde;es</li>
+<li>Cadastro de Processos</li>
+<li>Cadastro de Liminar</li>
+<li>Cadastro de Sindicatos</li>
+<li>Regras de Acordo Coletivo</li>
+<li>Centros de Custo</li>
+<li>Diretoria</li>
+<li>Gerencia</li>
+<li>Departamento</li>
+<li>Setor</li>
+<li>Organograma</li>
+<li>Par&acirc;metros</li>
+<li>Hor&aacute;rios</li>
+<li>Forma&ccedil;&atilde;o</li>
+</ul>
+</li>
+</li>
+<!--menu 3 
+<li>E-social
+<!--elementos de menu 3 nivel 1 
+<ul>
+<li>Certificado digital</li>
+<li>Eventos Iniciais</li>
+<li>Aviso Pr&eacute;vio</li>
+<li>Desligamentos</li>
+<li>Movimento</li>
+<li>Encerramento</li>
+<li>Conting&ecirc;ncia</li>
+<li>Consultas</li>
+<li>Exclus&otilde;es</li>
+<li>Monitoramento</li>
+<li>Listas</li>
+</ul>
+</li>
+<!--menu 4 
+<li>Recrutamento e Sele&ccedil;&atilde;o
+<!--elementos de menu 4 nivel 1 
+<ul>
+<li>Login Candidato </li>
+<li>Dados Pessoais</li>
+<li>Experi&ecirc;ncias</li>
+<li>Cursos</li>
+<li>Forma&ccedil;&atilde;o</li>
+<li>Cargo Pretendido </li>
+<li>Pretens&atilde;o Salarial </li>
+<li>Habilidades</li>
+<li>Vagas</li>
+<li>Movimenta&ccedil;&atilde;o de Pessoal </li>
+<li>Triagem</li>
+<li>Entrevistas</li>
+<li>Din&acirc;micas</li>
+<li>Testes</li>
+<li>Contrata&ccedil;&otilde;es</li>
+</ul>
+</li>
+<!--menu 5 
+<li>Medicina do Trabalho
+<!--elementos de menu 5 nivel 1 
+<ul>
+<li>Exames M&eacute;dicos</li>
+<li>Atestados</li>
+<li>Restri&ccedil;&otilde;es Cl&iacute;nicas</li>
+<li>Enfermidades</li>
+<li>Vacina&ccedil;&atilde;o</li>
+<li>Medica&ccedil;&atilde;o</li>
+<li>Afastamentos</li>
+<li>PCMSO</li>
+</ul>
+</li>
+<!--menu 6 
+<li>Seguran&ccedil;a do Trabalho
+<!--elementos de menu 6 nivel 1 
+<ul>
+<li>Riscos Ambientais</li>
+<li>EPI</li>
+<li>EPC</li>
+<li>CIPA</li>
+<li>SIPAT</li>
+<li>Brigada</li>
+<li>PPP</li>
+<li>PPRA</li>
+</ul>
+</li>
+<!--menu 7 
+<li>Treinamento e Desenvolvimento
+<!--elementos de menu 7 nivel 1 
+<ul>
+<li>Fatores</li>
+<li>Pontua&ccedil;&atilde;o</li>
+<li>Treinamentos</li>
+<li>Avalia&ccedil;&otilde;es</li>
+<li>Diagn&oacute;sticos</li>
+<li>Planos de A&ccedil;&otilde;es</li>
+<li>Clima </li>
+</ul>
+</li>
+<!--menu 8 
+<li>Cargos e Sal&aacute;rios
+<!--elementos de menu 8 nivel 1 
+<ul>
+<li>Descri&ccedil;&atilde;o de Cargos</li>
+<li>Fun&ccedil;&otilde;es</li>
+<li>Atividades</li>
+<li>Cursos</li>
+<li>Responsabilidades</li>
+<li>Habilidades</li>
+<li>Atitudes</li>
+<li>Tabelas Salariais</li>
+<li>Reajustes Salariais </li>
+</ul>
+</li>
+<!--menu 9 
+<li>Benef&iacute;cios
+<ul>
+<!--sub menu 9 nivel 1 
+<li>Vale Transporte
+<!--elementos de sub menu 9.1 nivel 2
+<ul>
+<li>Par&acirc;metros</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+<li>Arquivos</li>
+</ul>
+</li>
+<!--sub menu 9.1 nivel 1 
+<li>Vale Alimenta&ccedil;&atilde;o
+<!--elementos de sub menu 9.1 nivel 2 
+<ul>
+<li>Par&acirc;metros</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+<li>Arquivos</li>
+</ul>
+</li>
+<!--sub menu 9.2 nivel 1 
+<li>Refeit&oacute;rios
+<!--elementos de sub menu 9.2 nivel 2 
+<ul>
+<li>Par&acirc;metros</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+<li>Arquivos</li>
+</ul>
+</li>
+<!--sub menu 9.3 nivel 1 
+<li>Cesta B&aacute;sica
+<!--elementos de sub menu 9.3 nivel 2 
+<ul>
+<li>Par&acirc;metros</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+<li>Arquivos</li>
+</ul>
+</li>
+<li>Vale Refei&ccedil;&atilde;o
+<!--elementos herdeiros de sub menu 9.5
+<ul>
+<li>Par&acirc;metros</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+<li>Arquivos</li>
+</ul>
+</li>
+<li>Vale Cultural
+<!--elementos herdeiros de sub menu 9.6 
+<ul>
+<li>Par&acirc;metros</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+<li>Arquivos</li>
+</ul>
+</li>
+<li>Assist&ecirc;ncia M&eacute;dica
+<!--elementos herdeiros de sub menu 9.7 
+<ul>
+<li>Par&acirc;metros</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+<li>Arquivos</li>
+</ul>
+</li>
+<li>Assist&ecirc;ncia Odontol&oacute;gica
+<!--elementos herdeiros de sub menu 9.8 
+<ul>
+<li>Par&acirc;metros</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+<li>Arquivos</li>
+</ul>
+</li>
+<li>Gest&atilde;o de Frota
+<!--elementos herdeiros de sub menu 9.9 
+<ul>
+<li>Par&acirc;metros</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+<li>Arquivos</li>
+</ul>
+</li>
+<li>Vale Combust&iacute;vel
+<!--elementos herdeiros de sub menu 9.10 
+<ul>
+<li>Par&acirc;metros</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+<li>Arquivos</li>
+</ul>
+</li>
+<li>Ped&aacute;gio
+<!--elementos herdeiros de sub menu 9.11
+<ul>
+<li>Par&acirc;metros</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+<li>Arquivos</li>
+</ul>
+</li>
+<li>Estacionamento
+<!--elementos herdeiros de sub menu 9.12 
+<ul>
+<li>Par&acirc;metros</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+<li>Arquivos</li>
+</ul>
+</li>
+<li>Fretamento
+<!--elementos herdeiros de sub menu 9.13 
+<ul>
+<li>Par&acirc;metros</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+<li>Arquivos</li>
+</ul>
+</li>
+<li>Equipamentos
+<!--elementos herdeiros de sub menu 9.14 
+<ul>
+<li>Par&acirc;metros</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+<li>Arquivos</li>
+</ul>
+</li>
+<li>Campanhas
+<!--elementos herdeiros de sub menu 9.15 
+<ul>
+<li>Par&acirc;metros</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+<li>Arquivos</li>
+</ul>
+</li>
+</ul>
+</li>
+<!--menu 10 
+<li>Ponto Digital
+<!--elementos herdeiros de menu 10 
+<ul>
+<li>Rel&oacute;gios</li>
+<li>Escalas</li>
+<li>Controle de Acesso</li>
+<li>Crach&aacute;</li>
+<li>Marca&ccedil;&atilde;o</li>
+<li>Apontamento</li>
+<li>Ocorr&ecirc;ncias</li>
+<li>Banco de Horas</li>
+<li>Relat&oacute;rios</li>
+<li>Integra&ccedil;&otilde;es</li>
+</ul>
+</li>
+<!--menu 11 	
+<li>Workflow
+<!--elementos herdeiros de menu 11 
+<ul>
+<li>Admiss&otilde;es</li>
+<li>F&eacute;rias</li>
+<li>Rescis&otilde;es</li>
+<li>Promo&ccedil;&otilde;es</li>
+<li>Sal&aacute;rios</li>
+<li>Cargos</li>
+<li>Hor&aacute;rios</li>
+<li>Ocorr&ecirc;ncias do Ponto</li>
+</ul>
+<!--sub menu 11 
+<li>Portal
+<!--elementos herdeiros do sub menu 11 
+<ul>
+<li>Colaborador</li>
+<li>Gestor</li>
+</ul>
+</li>
+</li>
+<!--menu 12 
+<l>Folha de Pagamento
+<!--elementos herdeiros de menu 12 
+<u>
+<!--sub menu 12.1 
+<li>Admiss&atilde;o
+<!--elementos herdeiros do sub menu 12.1 
+<ul>
+<li>Cadastro</li>
+<li>Adicionais</li>
+<li>Pens&otilde;es</li>
+<li>Hist&oacute;ricos</li>
+<li>Transfer&ecirc;ncias</li>
+<li>Documentos</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+<!--sub menu 12.2 
+<li>Afastamento
+<!--elementos herdeiros do sub menu 12.2 	
+<ul>
+<li>Cadastro</li>
+<li>Hist&oacute;ricos</li>
+<li>Documentos</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+<!--sub menu 12.3 
+<li>F&eacute;rias
+<!--elementos herdeiros do sub menu 12.3 
+<ul>
+<li>Par&acirc;metros</li>
+<li>Hist&oacute;ricos</li>
+<li>Lan&ccedil;amentos</li>
+<li>Simula&ccedil;&otilde;es</li>
+<li>C&aacute;lculos</li>
+<li>Documentos</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+<!--sub menu 12.4 
+<li>Rescis&atilde;o
+<!--elementos herdeiros do sub menu 12.4 
+<ul>
+<li>Par&acirc;metros</li>
+<li>Hist&oacute;ricos</li>
+<li>Lan&ccedil;amentos</li>
+<li>Simula&ccedil;&otilde;es</li>
+<li>C&aacute;lculos</li>
+<li>Documentos</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+<!--sub menu 12.5 
+<li>Adiantamento
+<!--elementos herdeiros do sub menu 12.5 
+<ul>
+<li>Par&acirc;metros</li>
+<li>Hist&oacute;ricos</li>
+<li>Lan&ccedil;amentos</li>
+<li>Simula&ccedil;&otilde;es</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+<!--sub menu 12.6 
+<li>Folha Mensal
+<!--elementos herdeiros do sub menu 12.6 
+<ul>
+<li>Par&acirc;metros</li>
+<li>Hist&oacute;ricos</li>
+<li>Lan&ccedil;amentos</li>
+<li>Simula&ccedil;&otilde;es</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+<!--sub menu 12.7 
+<li>Folha Complementar
+<!--elementos herdeiros do sub menu 12.7 
+<ul>
+<li>Par&acirc;metros</li>
+<li>Hist&oacute;ricos</li>
+<li>Lan&ccedil;amentos</li>
+<li>Simula&ccedil;&otilde;es</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+<!--sub menu 12.8 
+<li>13&ordm; Sal&aacute;rio
+<!--elementos herdeiros do sub menu 12.8 
+<ul>
+<li>Par&acirc;metros</li>
+<li>Hist&oacute;ricos</li>
+<li>Importa&ccedil;&otilde;es</li>
+<li>Lan&ccedil;amentos</li>
+<li>Simula&ccedil;&otilde;es</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+<!--sub menu 12.9 
+<li>Diss&iacute;dio
+<!--elementos herdeiros do sub menu 12.9 
+<ul>
+<li>Par&acirc;metros</li>
+<li>Hist&oacute;ricos</li>
+<li>Lan&ccedil;amentos</li>
+<li>Simula&ccedil;&otilde;es</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+<!--sub menu 12.10 
+<li>Participa&ccedil;&atilde;o nos Lucros
+<!--elementos herdeiros do sub menu 12.10 
+<ul>
+<li>Par&acirc;metros</li>
+<li>Hist&oacute;ricos</li>
+<li>Lan&ccedil;amentos</li>
+<li>Simula&ccedil;&otilde;es</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+<!--sub menu 12.11 
+<li>Caged
+<!--elementos herdeiros do sub menu 12.11 
+<ul>
+<li>Par&acirc;metros</li>
+<li>Arquivo</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+<!--sub menu 12.12 
+<li>Gps
+<!--elementos herdeiros do sub menu 12.12 
+<ul>
+<li>Par&acirc;metros</li>
+<li>Hist&oacute;ricos</li>
+<li>Reten&ccedil;&otilde;es</li>
+<li>Funrural</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+<!--sub menu 12.13 
+<li>Irrf
+<!--elementos herdeiros do sub menu 12.13 
+<ul>
+<li>Darf</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+<!--sub menu 12.14 
+<li>Sefip
+<!--elementos herdeiros do sub menu 12.14 
+<ul>
+<li>Par&acirc;metros</li>
+<li>Arquivo</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+<!--sub menu 12.15 
+<li>Pis
+<!--elementos herdeiros do sub menu 12.15 
+<ul>
+<li>Par&acirc;metros</li>
+<li>Hist&oacute;ricos</li>
+<li>Lan&ccedil;amentos</li>
+<li>Simula&ccedil;&otilde;es</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+<!--sub menu 12.16 
+<li>Manad
+<!--elementos herdeiros do sub menu 12.16 
+<ul>
+<li>Par&acirc;metros</li>
+<li>Hist&oacute;ricos</li>
+<li>Lan&ccedil;amentos</li>
+<li>Simula&ccedil;&otilde;es</li>
+<li>C&aacute;lculos</li>
+<li>Arquivo</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+<!--sub menu 12.17 
+<li>Cnab
+<!--elementos herdeiros do sub menu 12.17 
+<ul>
+<li>Par&acirc;metros</li>
+<li>Arquivo</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+<!--sub menu 12.18 
+<liProvis&otilde;es
+<!--elementos herdeiros do sub menu 12.18 
+<ul>
+<!--sub menu nivel 3 12.18.1 
+<l>F&eacute;rias
+<!--elementos herdeiros do sub menu 12.18.1 
+<ul>
+<li>Par&acirc;metros</li>
+<li>Hist&oacute;ricos</li>
+<li>Lan&ccedil;amentos</li>
+<li>Simula&ccedil;&otilde;es</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+</l>
+</ul>
+<!--elementos herdeiros do sub menu 12.18 
+<ul>
+<!--sub menu nivel 3 12.18.2 
+<li>13&ordm; Sal&aacute;rio
+<!--elementos herdeiros do sub menu 12.18.2 
+<ul>
+<li>Par&acirc;metros</li>
+<li>Hist&oacute;ricos/li>
+<li>Lan&ccedil;amentos</li>
+<li>Simula&ccedil;&otilde;es</li>
+<li>C&aacute;lculos</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+</ul>
+</i>
+<li>Integra&ccedil;&atilde;o Cont&aacute;bil
+<ul>
+<li>Par&acirc;metros</li>
+<li>Hist&oacute;ricos</li>
+<li>Lan&ccedil;amentoss</li>
+<li>Simula&ccedil;&otilde;es</li>
+<li>C&aacute;lculos</li>
+<li>Arquivo</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+<li>Ficha Financeira
+<ul>
+<li>Importa&ccedil;&otilde;es de Hist&oacute;ricos</li>
+<li>Manuten&ccedil;&atilde;o de Hist&oacute;ricos</li>
+<li>Relat&oacute;rios</li>
+</ul>
+</li>
+<li>Gerador de Relat&oacute;rios
+<ul>
+<li>Cadastrais</li>
+<li>Financeiros</li>
+</ul>
+</li>
+</ul>
+</i>
+
+<li>Business Inteligence
+<ul>
+<li>Quadro Efetivo</li>
+<li>Head Count </li>
+<li>Turn Over</li>
+<li>Absente&iacute;smo</li>
+<li>Benef&iacute;cios</li>
+<li>Custos</li>
+<li>Dashboard</li>
+</ul>
+</li>
+
+<li>Suporte
+<ul>
+<li>Help Desk</li>
+<li>Ajuda</li>
+<li>Manual</li>
+</ul>
+</li>
+ -->
